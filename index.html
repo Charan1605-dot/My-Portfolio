@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charan Nadiminti | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#3b82f6',
+                        dark: '#0f172a',
+                        card: '#1e293b',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased selection:bg-primary selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="#"
+                        class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-400">CN</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#about"
+                            class="hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="#experience"
+                            class="hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">Experience</a>
+                        <a href="#projects"
+                            class="hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                        <a href="#contact"
+                            class="bg-primary hover:bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium transition-all transform hover:scale-105">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+        <!-- Background decorative elements -->
+        <div
+            class="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob">
+        </div>
+        <div
+            class="absolute top-20 right-10 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000">
+        </div>
+        <div
+            class="absolute -bottom-8 left-20 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-4000">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h2 class="text-blue-400 font-semibold tracking-wide uppercase mb-4 reveal">Hello, I'm</h2>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight reveal" style="transition-delay: 100ms;">
+                Charan <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400">Nadiminti</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-10 reveal"
+                style="transition-delay: 200ms;">
+                ASU CS Junior with a Mathematics Minor. Building AI & Computer Vision systems.
+            </p>
+            <div class="flex justify-center gap-4 reveal" style="transition-delay: 300ms;">
+                <a href="#projects"
+                    class="bg-gradient-to-r from-blue-500 to-teal-500 hover:from-blue-600 hover:to-teal-600 text-white px-8 py-3 rounded-full font-medium transition-all transform hover:scale-105 shadow-lg shadow-blue-500/25">
+                    View Work
+                </a>
+                <a href="Resume_154.pdf" target="_blank"
+                    class="border border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white px-8 py-3 rounded-full font-medium transition-all">
+                    Resume
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-dark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-6">
+                        I'm a Computer Science junior at Arizona State University with a minor in Mathematics. I have a
+                        strong foundation in algorithms, systems, and computational methods.
+                    </p>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-6">
+                        I've delivered AI and computer-vision systems to real users and am currently seeking Summer 2026
+                        internships in software engineering, data science, operations research, or quantitative
+                        analysis.
+                    </p>
+
+                    <div class="mt-8">
+                        <h3 class="text-xl font-semibold mb-4 text-white">Education</h3>
+                        <div class="bg-card p-6 rounded-xl border border-gray-800">
+                            <div class="flex justify-between items-start mb-2">
+                                <div>
+                                    <h4 class="font-bold text-lg">Arizona State University</h4>
+                                    <p class="text-blue-400">B.S. Computer Science, Minor in Mathematics</p>
+                                </div>
+                                <span class="text-sm text-gray-500 bg-gray-900 px-3 py-1 rounded-full">2024 -
+                                    2027</span>
+                            </div>
+                            <p class="text-gray-400 text-sm mt-2">GPA: 4.0 | Dean’s List (Spr/Fall 2024, Spr 2025)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal" style="transition-delay: 200ms;">
+                    <h3 class="text-2xl font-bold mb-6">Technical Skills</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">Languages</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-4 py-2 bg-gray-800 rounded-lg text-sm text-blue-300 border border-gray-700">Python</span>
+                                <span
+                                    class="px-4 py-2 bg-gray-800 rounded-lg text-sm text-blue-300 border border-gray-700">Java</span>
+                                <span
+                                    class="px-4 py-2 bg-gray-800 rounded-lg text-sm text-blue-300 border border-gray-700">C/C++</span>
+                                <span
+                                    class="px-4 py-2 bg-gray-800 rounded-lg text-sm text-blue-300 border border-gray-700">TypeScript</span>
+                                <span
+                                    class="px-4 py-2 bg-gray-800 rounded-lg text-sm text-blue-300 border border-gray-700">SQL</span>
+                                <span
+                                    class="px-4 py-2 bg-gray-800 rounded-lg text-sm text-blue-300 border border-gray-700">R</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">Frameworks &
+                                Tools</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-4 py-2 bg-gray-800 rounded-lg text-sm text-teal-300 border border-gray-700">React</span>
+                                <span
+                                    class="px-4 py-2 bg-gray-800 rounded-lg text-sm text-teal-300 border border-gray-700">FastAPI</span>
+                                <span
+                                    class="px-4 py-2 bg-gray-800 rounded-lg text-sm text-teal-300 border border-gray-700">Node.js</span>
+                                <span
+                                    class="px-4 py-2 bg-gray-800 rounded-lg text-sm text-teal-300 border border-gray-700">TensorFlow</span>
+                                <span
+                                    class="px-4 py-2 bg-gray-800 rounded-lg text-sm text-teal-300 border border-gray-700">OpenCV</span>
+                                <span
+                                    class="px-4 py-2 bg-gray-800 rounded-lg text-sm text-teal-300 border border-gray-700">AWS</span>
+                                <span
+                                    class="px-4 py-2 bg-gray-800 rounded-lg text-sm text-teal-300 border border-gray-700">Docker</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-24 bg-gray-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center reveal">Work Experience</h2>
+
+            <div class="space-y-8 max-w-4xl mx-auto">
+                <!-- Job 1 -->
+                <div
+                    class="bg-card p-8 rounded-2xl border border-gray-800 hover:border-blue-500/30 transition-all hover:shadow-lg hover:shadow-blue-500/10 reveal">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Undergraduate Research Assistant</h3>
+                            <p class="text-blue-400">Arizona State University (Dr. Melana Español)</p>
+                        </div>
+                        <span class="text-sm text-gray-500 mt-2 md:mt-0 bg-gray-900 px-3 py-1 rounded-full w-fit">Jun
+                            2024 – Present</span>
+                    </div>
+                    <ul class="list-disc list-inside text-gray-400 space-y-2">
+                        <li>Processed 120,000+ images using k-means clustering and PCA for color feature extraction.
+                        </li>
+                        <li>Designed parallel processing pipeline on AWS (EC2/S3), reducing runtime from 2 hours to 25
+                            minutes.</li>
+                        <li>Applied statistical methods and data visualization techniques to identify patterns in
+                            large-scale datasets.</li>
+                    </ul>
+                </div>
+
+                <!-- Job 2 -->
+                <div
+                    class="bg-card p-8 rounded-2xl border border-gray-800 hover:border-blue-500/30 transition-all hover:shadow-lg hover:shadow-blue-500/10 reveal">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Undergraduate Teaching Assistant</h3>
+                            <p class="text-blue-400">Arizona State University (IEE 380: Probability & Statistics)</p>
+                        </div>
+                        <span class="text-sm text-gray-500 mt-2 md:mt-0 bg-gray-900 px-3 py-1 rounded-full w-fit">Aug
+                            2025 – Present</span>
+                    </div>
+                    <ul class="list-disc list-inside text-gray-400 space-y-2">
+                        <li>Assist 100+ students with probability theory, statistical inference, and data analysis
+                            concepts.</li>
+                        <li>Hold office hours, grade assignments, and conduct review sessions for midterms and finals.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Job 3 -->
+                <div
+                    class="bg-card p-8 rounded-2xl border border-gray-800 hover:border-blue-500/30 transition-all hover:shadow-lg hover:shadow-blue-500/10 reveal">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Computer Science Tutor</h3>
+                            <p class="text-blue-400">Arizona State University</p>
+                        </div>
+                        <span class="text-sm text-gray-500 mt-2 md:mt-0 bg-gray-900 px-3 py-1 rounded-full w-fit">Aug
+                            2025 – Present</span>
+                    </div>
+                    <ul class="list-disc list-inside text-gray-400 space-y-2">
+                        <li>Tutor students in data structures, algorithms, and programming fundamentals (Python, Java,
+                            C++).</li>
+                        <li>Develop problem-solving strategies and provide one-on-one mentoring for course success.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center reveal">Featured Projects</h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div
+                    class="bg-card rounded-2xl overflow-hidden border border-gray-800 hover:border-teal-500/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-teal-500/10 group reveal">
+                    <div
+                        class="h-48 bg-gradient-to-br from-blue-900 to-slate-900 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-grid-white/[0.05] bg-[length:20px_20px]"></div>
+                        <span class="text-4xl">🤖</span>
+                    </div>
+                    <div class="p-6 flex flex-col h-full">
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-teal-400 transition-colors">AI Aggregator
+                            Platform</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="text-xs font-medium px-2 py-1 bg-blue-500/10 text-blue-400 rounded">FastAPI</span>
+                            <span
+                                class="text-xs font-medium px-2 py-1 bg-blue-500/10 text-blue-400 rounded">React</span>
+                            <span class="text-xs font-medium px-2 py-1 bg-blue-500/10 text-blue-400 rounded">AWS</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4 flex-grow">
+                            Unified chat interface querying GPT-4o, Command-R, and Gemini. Implemented a
+                            confidence-weighted scoring algorithm that boosted answer quality by <strong>20%</strong>.
+                            The Async FastAPI + Redis architecture sustains <strong>50+ concurrent users</strong> with
+                            &lt;300ms latency.
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center text-sm font-medium text-teal-400 hover:text-teal-300 mt-auto">
+                            View Project <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-card rounded-2xl overflow-hidden border border-gray-800 hover:border-teal-500/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-teal-500/10 group reveal"
+                    style="transition-delay: 100ms;">
+                    <div
+                        class="h-48 bg-gradient-to-br from-teal-900 to-slate-900 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-grid-white/[0.05] bg-[length:20px_20px]"></div>
+                        <span class="text-4xl">🚗</span>
+                    </div>
+                    <div class="p-6 flex flex-col h-full">
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-teal-400 transition-colors">License Plate
+                            Recognition</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="text-xs font-medium px-2 py-1 bg-teal-500/10 text-teal-400 rounded">OpenCV</span>
+                            <span
+                                class="text-xs font-medium px-2 py-1 bg-teal-500/10 text-teal-400 rounded">TensorFlow</span>
+                            <span
+                                class="text-xs font-medium px-2 py-1 bg-teal-500/10 text-teal-400 rounded">Node.js</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4 flex-grow">
+                            Built a CV pipeline achieving <strong>92% accuracy</strong> for automated gate access across
+                            2,000+ spots. Added an alert subsystem for whitelist/blacklist plates, reducing security
+                            response time by <strong>40%</strong>.
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center text-sm font-medium text-teal-400 hover:text-teal-300 mt-auto">
+                            View Project <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-card rounded-2xl overflow-hidden border border-gray-800 hover:border-teal-500/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-teal-500/10 group reveal"
+                    style="transition-delay: 200ms;">
+                    <div
+                        class="h-48 bg-gradient-to-br from-purple-900 to-slate-900 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-grid-white/[0.05] bg-[length:20px_20px]"></div>
+                        <span class="text-4xl">🗺️</span>
+                    </div>
+                    <div class="p-6 flex flex-col h-full">
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-teal-400 transition-colors">Pathfinding
+                            Visualizer</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="text-xs font-medium px-2 py-1 bg-purple-500/10 text-purple-400 rounded">React</span>
+                            <span
+                                class="text-xs font-medium px-2 py-1 bg-purple-500/10 text-purple-400 rounded">D3</span>
+                            <span
+                                class="text-xs font-medium px-2 py-1 bg-purple-500/10 text-purple-400 rounded">TypeScript</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4 flex-grow">
+                            Interactive web app visualizing A*, Dijkstra, and BFS on weighted grids at <strong>60
+                                fps</strong>. Deployed on GitHub Pages and currently used by <strong>1,000+
+                                students</strong> in ASU algorithms courses.
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center text-sm font-medium text-teal-400 hover:text-teal-300 mt-auto">
+                            View Project <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-gray-900/50 border-t border-gray-800">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 reveal">
+                <h2 class="text-3xl font-bold mb-4">Get In Touch</h2>
+                <p class="text-gray-400">
+                    I'm currently looking for Summer 2026 internships. Feel free to reach out!
+                </p>
+            </div>
+
+            <div class="bg-card p-8 rounded-2xl border border-gray-800 shadow-xl reveal">
+                <form onsubmit="return false;" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-400 mb-2">Name</label>
+                            <input type="text" id="name"
+                                class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
+                                placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-400 mb-2">Email</label>
+                            <input type="email" id="email"
+                                class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
+                                placeholder="john@example.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-400 mb-2">Message</label>
+                        <textarea id="message" rows="4"
+                            class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
+                            placeholder="Your message..."></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-gradient-to-r from-blue-500 to-teal-500 hover:from-blue-600 hover:to-teal-600 text-white font-medium py-3 rounded-lg transition-all transform hover:scale-[1.02] shadow-lg shadow-blue-500/25">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-dark border-t border-gray-800">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <span
+                    class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-400">CN</span>
+                <p class="text-gray-500 text-sm mt-2">© 2025 Charan Nadiminti. All rights reserved.</p>
+            </div>
+
+            <div class="flex gap-6">
+                <a href="mailto:cnadimin@asu.edu"
+                    class="text-gray-400 hover:text-white transition-colors hover:-translate-y-1 transform duration-200">
+                    <span class="sr-only">Email</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="https://github.com/charan-nadiminti" target="_blank"
+                    class="text-gray-400 hover:text-white transition-colors hover:-translate-y-1 transform duration-200">
+                    <span class="sr-only">GitHub</span>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                </a>
+                <a href="#"
+                    class="text-gray-400 hover:text-white transition-colors hover:-translate-y-1 transform duration-200">
+                    <span class="sr-only">LinkedIn</span>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
